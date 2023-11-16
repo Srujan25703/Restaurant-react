@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Cache-Control"
+      content="no-store, no-cache, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Admin Page - Plates&Pleasure</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #363636;
+      }
+
+      header {
+        background-color: #363636;
+        color: white;
+        text-align: center;
+        padding: 15px;
+      }
+
+      nav {
+        background-color: #cda45e;
+        color: white;
+        width: 200px;
+        padding: 15px;
+        position: fixed;
+        height: 100%;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: white;
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      nav a:hover {
+        background-color: #f57c4c;
+      }
+
+      section {
+        margin-left: 220px;
+        padding: 15px;
+        color: white;
+        background-color: #363636;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 20px;
+      }
+
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #cda45e;
+        color: white;
+      }
+
+      button {
+        padding: 10px;
+        background-color: #cda45e;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Plates&Pleasure</h1>
+    </header>
+
+    <nav>
+      <a href="#" onclick="BookingsList()">Bookings</a>
+      <a href="#" onclick="showQueries()">Queries</a>
+      <button onclick="logout()">Logout</button>
+    </nav>
+
+    <section>
+      <!-- Content will be dynamically loaded here -->
+    </section>
+
+    <script>
+      // Simulate login by setting a token in sessionStorage
+      sessionStorage.setItem("adminToken", "yourAuthToken");
+
+      function BookingsList() {
+        document.querySelector("section").innerHTML = `
+        <h2>Bookings</h2>
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Date</th>
+            <th>Number of People</th>
+          </tr>
+          
+        </table>
+      `;
+      }
+
+      function showQueries() {
+        if (!isLoggedIn()) {
+          alert("Please login first.");
+          return;
+        }
+
+        const queriesData = [
+          {
+            name: "Alice Johnson",
+            email: "alice@example.com",
+            message: "Query about menu options.",
+          },
+          {
+            name: "Bob Williams",
+            email: "bob@example.com",
+            message: "Inquiry regarding reservation process.",
+          },
+          // Add more data as needed
+        ];
+
+        document.querySelector("section").innerHTML = `
+        <h2>Queries</h2>
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Message</th>
+          </tr>
+          ${queriesData
+            .map(
+              (query) => `
+            <tr>
+              <td>${query.name}</td>
+              <td>${query.email}</td>
+              <td>${query.message}</td>
+            </tr>
+          `
+            )
+            .join("")}
+        </table>
+      `;
+      }
+
+      function logout() {
+        sessionStorage.removeItem("adminToken");
+        sessionStorage.clear();
+
+        // Use replaceState to modify the browser history
+        const baseUrl = window.location.origin + window.location.pathname;
+        history.replaceState(null, "", baseUrl + "?loggedOut=true");
+        window.location.replace("login.html");
+      }
+
+      function isLoggedIn() {
+        return sessionStorage.getItem("adminToken") !== null;
+      }
+
+      // Check authentication on page load
+      window.onload = function () {
+        const isLoggedOut = new URLSearchParams(window.location.search).get(
+          "loggedOut"
+        );
+
+        if (isLoggedOut) {
+          alert("You have been logged out.");
+          window.location.replace("login.html");
+          return;
+        }
+
+        if (!isLoggedIn()) {
+          alert("Please login first.");
+          window.location.replace("login.html");
+        }
+      };
+    </script>
+  </body>
+</html>

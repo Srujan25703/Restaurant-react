@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plates&Pleasure</title>
+    <style>
+      body {
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.5
+        ); /* Adjust the alpha value (0.5 for 50% opacity) */
+        background-image: url("d36d462db827833805497d9ea78a1343.jpg");
+        background-size: cover;
+        background-blend-mode: overlay; /* Optional: This blend mode can enhance the effect */
+      }
+
+      h1 {
+        color: #ffffff; /* Updated color for the heading */
+        text-align: center; /* Center the heading */
+        padding: 20px; /* Add padding for better visibility */
+        font-size: 85px;
+      }
+
+      .popup.signin-background {
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 20px;
+        border: 2px solid #363636;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-sizing: border-box;
+        opacity: 0.8;
+        border-radius: 23px;
+      }
+
+      .popup.signin-background .signin-form {
+        width: 300px;
+        text-align: center;
+      }
+
+      .popup.signin-background label {
+        display: block;
+        margin-bottom: 8px;
+        color: white;
+      }
+
+      .popup.signin-background input {
+        width: 75%;
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: black;
+        color: white;
+      }
+
+      .chrome-yellow-button {
+        background-color: #cda45e;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin: 20px auto;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="navbar-text text-white m-0 p-0">Plates&Pleasure</h1>
+
+    <div id="signin-popup" class="popup signin-background">
+      <div class="signin-form">
+        <h2>Sign in</h2>
+
+        <form id="signin-form" onsubmit="handleSignInSubmit(event)">
+          <label for="signin-name">Username</label>
+          <input type="text" id="signin-name" placeholder="Name" required />
+
+          <label for="signin-password">Password</label>
+          <input
+            type="password"
+            id="signin-password"
+            placeholder="Password"
+            required
+          />
+
+          <div class="complete-signup-button">
+            <button type="submit" class="chrome-yellow-button">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      function scrollToSection(sectionId) {
+        var section = document.getElementById(sectionId);
+
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+
+      function showSignInForm() {
+        var signInPopup = document.getElementById("signin-popup");
+        signInPopup.style.display = "block";
+      }
+
+      function handleSignInSubmit(event) {
+        event.preventDefault();
+
+        var username = document.getElementById("signin-name").value;
+        var password = document.getElementById("signin-password").value;
+
+        if (username === "srujan" && password === "srujan") {
+          window.location.href = "/admin.html";
+        }
+      }
+    </script>
+  </body>
+</html>

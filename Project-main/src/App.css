@@ -1,0 +1,579 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #0c0b09;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* background-image: url("C:\\Users\\sruja\\OneDrive\\Desktop\\MERN\\Project-main\\src\\Images\\d36d462db827833805497d9ea78a1343(1).jpg"); */
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+
+h1 {
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  font-size: 85px;
+}
+
+.popup.signin-background {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 20px;
+  border: 2px solid #363636;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  opacity: 0.8;
+  border-radius: 23px;
+}
+
+.popup.signin-background .signin-form {
+  width: 300px;
+  text-align: center;
+}
+
+.popup.signin-background label {
+  display: block;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.popup.signin-background input {
+  width: 75%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: black;
+  color: white;
+}
+
+.chrome-yellow-button {
+  background-color: #cda45e;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 20px auto;
+  display: block;
+}
+
+.yellow-text {
+  color: #cda45e;
+}
+
+#hero {
+  background-image: url("./Images/hero-bg.jpg");
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("./Images/hero-bg.jpg") center center / cover no-repeat;
+  filter: brightness(0.5);
+  z-index: -1;
+}
+
+#about {
+  position: relative;
+  overflow: hidden;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("./Images/about-bg.jpg") center center / cover no-repeat;
+  filter: brightness(0.2);
+  z-index: -1;
+}
+
+#about .content {
+  color: white;
+}
+
+#about .about-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#about .about-img img {
+  transition: transform 0.3s ease;
+}
+
+#about .about-img img:hover {
+  transform: scale(1.1);
+}
+
+#about .about-img img {
+  border: 2px solid white;
+  transition: transform 0.3s ease;
+}
+
+#about .about-img img:hover {
+  transform: scale(1.1);
+}
+
+.black-background {
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+
+.menu-content p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.dotted-line {
+  border-bottom: 1px dotted #777;
+  margin: 0 8px;
+  color: white;
+}
+
+.menu-ingredients {
+  color: white;
+}
+
+.menu-item {
+  margin-bottom: 20px;
+}
+
+#menu .navbar ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+#menu .navbar li {
+  cursor: pointer;
+  padding: 10px 20px;
+  margin: 0 5px;
+  color: #cda45e;
+  transition: color 0.3s;
+}
+
+#menu .navbar li:hover {
+  color: #fff;
+}
+
+#menu .navbar li.active {
+  background-color: #cda45e;
+  color: #fff;
+}
+
+.section-title h2,
+.menu-content p {
+  color: #cda45e;
+}
+
+.book-a-table {
+  padding: 100px;
+  background: #000;
+  color: #fff;
+}
+
+.book-a-table h2 {
+  color: #cda45e;
+}
+
+.input-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.input-group input {
+  flex: 1;
+  width: calc(33.33% - 10px);
+  margin-bottom: 10px;
+}
+
+.text-area-group textarea {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#why-us {
+  color: white;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+#why-us .section-title h2 {
+  color: white;
+}
+
+#why-us .box {
+  color: white;
+  transition: background-color 0.3s;
+}
+
+#why-us .box:nth-child(1) {
+  background-color: #1a1a1a;
+}
+
+#why-us .box:nth-child(2) {
+  background-color: #333;
+}
+
+#why-us .box:nth-child(3) {
+  background-color: #555;
+}
+
+#why-us .box:hover {
+  background-color: #cda45e;
+}
+
+#why-us .section-title h2 {
+  color: #cda45e;
+}
+
+#why-us .box {
+  color: white;
+  transition: background-color 0.3s;
+  padding: 20px;
+}
+
+.book-a-table button {
+  background-color: #cda45e;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 20px auto;
+  display: block;
+}
+
+.php-email-form input[type="text"],
+.php-email-form input[type="email"],
+.php-email-form input[type="tel"],
+.php-email-form input[type="number"],
+.php-email-form input[type="date"],
+.php-email-form input[type="time"],
+.php-email-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #000;
+  color: #fff;
+}
+
+.php-email-form textarea {
+  resize: vertical;
+}
+
+.php-email-form button[type="submit"] {
+  background: #cda45e;
+  border: 0;
+  padding: 10px 35px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.php-email-form button[type="submit"]:hover {
+  background-color: #cda45e;
+}
+
+.php-email-form button[type="submit"]:focus {
+  outline: none;
+}
+
+.php-email-form .validate {
+  display: none;
+  color: red;
+  margin-bottom: 5px;
+}
+
+.php-email-form .mb-3 {
+  margin-bottom: 15px;
+}
+
+.php-email-form table {
+  background: #000;
+}
+
+.php-email-form th,
+.php-email-form td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  color: #fff;
+  background: #000;
+}
+
+.php-email-form th {
+  background: #000;
+}
+
+.php-email-form .black-table {
+  background-color: black;
+  color: white;
+}
+
+.php-email-form .black-table th,
+.php-email-form .black-table td {
+  background: black;
+  color: white;
+}
+
+.php-email-form .black-table input[type="number"] {
+  background-color: black;
+  color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px;
+  width: 80px;
+}
+
+.gallery {
+  background-color: black;
+  padding: 20px;
+  color: white;
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+  border: 2px solid #fff;
+}
+
+.gallery-image:hover {
+  transform: scale(1.1);
+}
+
+.chefs-section {
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+
+.g-4 > .col-lg-3 {
+  padding: 0 8px;
+}
+
+.chef-item {
+  border: 2px solid #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chef-item img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.contact {
+  background-color: #000;
+  color: #fff;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.contact .info {
+  width: 100%;
+}
+
+.contact .info i {
+  font-size: 20px;
+  float: left;
+  width: 44px;
+  height: 44px;
+  background: #cda45e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact .info h4 {
+  padding: 0 0 0 60px;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  font-family: "Poppins", sans-serif;
+}
+
+.contact .info p {
+  padding: 0 0 0 60px;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: #bab3a6;
+}
+
+.contact .info .open-hours,
+.contact .info .email,
+.contact .info .phone {
+  margin-top: 40px;
+}
+
+.contact .php-email-form {
+  width: 100%;
+}
+
+.contact .php-email-form .form-group {
+  padding-bottom: 8px;
+}
+
+.contact .php-email-form .validate {
+  display: none;
+  color: red;
+  margin: 0 0 15px 0;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.contact .php-email-form .error-message {
+  display: none;
+  color: #fff;
+  background: #ed3c0d;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.contact .php-email-form .sent-message {
+  display: none;
+  color: #fff;
+  background: #18d26e;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.contact .php-email-form .loading {
+  display: none;
+  text-align: center;
+  padding: 15px;
+}
+
+.contact .php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #cda45e;
+  border-top-color: #1a1814;
+  animation: animate-loading 1s linear infinite;
+}
+
+.contact .php-email-form input,
+.contact .php-email-form textarea {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+  background: #0c0b09;
+  border-color: #625b4b;
+  color: white;
+}
+
+.contact .php-email-form input::-moz-placeholder,
+.contact .php-email-form textarea::-moz-placeholder {
+  color: #a49b89;
+}
+
+.contact .php-email-form input::placeholder,
+.contact .php-email-form textarea::placeholder {
+  color: #a49b89;
+}
+
+.contact .php-email-form input:focus,
+.contact .php-email-form textarea:focus {
+  border-color: #cda45e;
+}
+
+.contact .php-email-form input {
+  height: 44px;
+}
+
+.contact .php-email-form textarea {
+  padding: 10px 12px;
+}
+
+.contact .php-email-form button[type="submit"] {
+  background: #cda45e;
+  border: 0;
+  padding: 10px 35px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.contact .php-email-form button[type="submit"]:hover {
+  background: #d3af71;
+}
+
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#about .content {
+  opacity: 0;
+  animation: fadeUp 1s forwards;
+}
+
+#about .about-img img {
+  opacity: 0;
+  animation: fadeUp 1s 0.5s forwards;
+}
+#login {
+  background-image: url("C:\\Users\\sruja\\OneDrive\\Desktop\\MERN\\Project-main\\src\\Images\\d36d462db827833805497d9ea78a1343(1).jpg");
+}
